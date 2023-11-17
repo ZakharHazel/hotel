@@ -1,0 +1,46 @@
+﻿<Page x:Class="Hotel.Pages.add_staff"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Hotel.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="add_staff">
+
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="195*"/>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="195*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="130*"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Column="1" Grid.Row="1" Style="{StaticResource p_lebel}" Content="Имя"/>
+        <Label Grid.Column="1" Grid.Row="3" Style="{StaticResource p_lebel}" Content="Логин"/>
+        <Label Grid.Column="1" Grid.Row="5" Style="{StaticResource p_lebel}" Content="Пароль"/>
+        <Label Grid.Column="1" Grid.Row="7" Style="{StaticResource p_lebel}" Content="Роль"/>
+
+        <TextBox x:Name="name_box" Grid.Column="3" Grid.Row="1" Style="{StaticResource text}"/>
+        <TextBox x:Name="login_box" Grid.Column="3" Grid.Row="3" Style="{StaticResource text}"/>
+        <TextBox x:Name="pass_box" Grid.Column="3" Grid.Row="5" Style="{StaticResource text}"/>
+        <ComboBox x:Name="rol_box" DisplayMemberPath="name" Grid.Column="3" Grid.Row="7"/>
+
+        <Button x:Name="btn_create" Grid.Column="1" Grid.Row="9" Style="{StaticResource btn}" Content="Добавить" Click="btn_create_Click"/>
+        <Button x:Name="btn_back" Grid.Column="3" Grid.Row="9" Style="{StaticResource btn}" Content="Назад"/>
+       
+    </Grid>
+</Page>
